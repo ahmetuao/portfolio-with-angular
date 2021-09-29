@@ -1,1 +1,60 @@
 /* You can add global styles to this file, and also import other style files */
+/* TEXT */
+
+.text-center {
+  text-align: center;
+}
+
+.heading-small {
+  font-size: 1.25rem;
+}
+.heading-medium {
+  font-size: 1.5rem;
+}
+.heading-big {
+  font-size: 1.75rem;
+}
+
+/* COLORS */
+
+.bg-dark-blue {
+  background: #062e51;
+}
+.bg-light-blue {
+  background: #336ea2;
+}
+
+/* Buttons */
+
+.btn {
+  margin-top: 1.25rem;
+  padding: 0.8rem 3rem;
+  border-radius: 10px;
+  letter-spacing: 1px;
+}
+
+.btn-block {
+  width: 100%;
+  text-align: center;
+}
+/* Container */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* FORMS */
+
+.form-group {
+  padding: 0.25rem 0;
+}
+.form-control {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  resize: none; /* Text Area'nın kullanıcı tarafından değiştirilme opsiyonunu kaldırır. */
+}
+.form-group label {
+  display: block;
+}
