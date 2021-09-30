@@ -1,188 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmet Ustaalioğlu | Programlama Eğitimleri</title>
-
-    <meta name="keyword" content="Python,Java,JavaScript">
-    <meta name="description" content="Ahmet Ustaalioğlu | Programlama Eğitimleri">
-
-    <!-- FONTS GOOGLE -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    
-    <!-- <link rel="stylesheet" href="./css/global.css"> Her tarafta kullanacağımız class larımız için. -->
-    <!-- <link rel="stylesheet" href="./css/main.css"> ANA CSS kaynağımız. -->
-    
-    <!-- TABLET -->
-    <!-- <link rel="stylesheet" media="(max-width:1024px)" href="./css/tablet.css"> -->
-    <!-- TELEFON -->
-    <!-- <link rel="stylesheet" media="(max-width:500px" href="./css/mobile.css"> -->
-</head>
-<body>
-    <header class="bg-dark-blue"> 
-        <div class="container">
-            <nav id="navbar">
-                <h1 class="heading-medium">Ahmet Ustaalioğlu</h1>
-    
-                <ul>
-                    <li><a href="#home" target="_blank">Ana Sayfa</a></li>
-                    <li><a href="#training">Eğitimler</a></li>
-                    <li><a href="#courses">Kurslar</a></li>
-                    <li><a href="#contact">İletişim</a></li>
-                </ul>
-            </nav>
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="m-0 navbar-brand col-md-3 col-lg-2 me-0 px-3" style="font-size: larger;" href="/">Ahmet Ustaalioğlu</a>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <div id="portfolio" class="m-auto text-white" style="letter-spacing: 2px;" >Portfolio Web Application with <strong style="font-size: larger; color: rgb(182, 4, 4);">Angular</strong></div>
+    <div id="svg">
+        <svg style="margin: 0 1rem;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="5em" height="auto" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 139"><g fill="none" fill-rule="evenodd"><g fill="#B52E31"><path d="M150.6 102.8v-63h8.1l38.5 50.7V39.8h7.7v63h-8.1l-38.5-51.2v51.2h-7.7z"/><path d="M267.6 100.3c-5.1 1.9-10.6 2.9-16.4 2.9c-22.8 0-34.2-10.9-34.2-32.8c0-20.7 11-31.1 33-31.1c6.3 0 12.2.9 17.6 2.6v7c-5.4-2.1-11-3.1-16.7-3.1c-17.2 0-25.8 8.2-25.8 24.4c0 17.5 8.5 26.2 25.4 26.2c2.7 0 5.7-.4 9-1.1V74.2h8.1v26.1z"/><path d="M280.6 78.5V39.8h8.1v38.7c0 12.1 6 18.2 18.1 18.2c12 0 18.1-6.1 18.1-18.2V39.8h8.1v38.7c0 16.5-8.7 24.8-26.2 24.8s-26.2-8.3-26.2-24.8z"/><path d="M355.6 39.8v56.4h33v6.6h-41.1v-63h8.1z"/><path d="M400.3 102.8h-8.5l31.3-71.3l31.3 71.3h-9L437.3 83h-20.8l2.2-6.6h15.9l-11.8-28.5l-22.5 54.9z"/><path d="M463.1 102.8v-63H490c12 0 18 5 18 15.1c0 8.2-5.9 14.3-17.6 18.2l21.6 29.7h-10.7l-20-28.3v-5.3c12-1.9 18.1-6.5 18.1-13.9c0-5.8-3.3-8.7-10-8.7h-18v56.2h-8.3z"/></g><path d="M0 23L64.5 0l66.2 22.6l-10.7 85.3l-55.5 30.7l-54.6-30.3L0 23z" fill="#E23237"/><path d="M130.7 22.6L64.5 0v138.6l55.5-30.7l10.7-85.3z" fill="#B52E31"/><path d="M64.6 16.2l-40.2 89.4l15-.3l8.1-20.2H83.4l8.8 20.4l14.3.3l-41.9-89.6zm.1 28.7l13.6 28.4H52.8l11.9-28.4z" fill="#FFF"/></g></svg>
+    </div>
+</header>
+  
+  <div class="container-fluid">
+    <div style="width: 100%;" class="row">
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <div class="position-sticky pt-3">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">
+                <span data-feather="home"></span>
+                Hakkımda
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="file"></span>
+                Eğitim
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="shopping-cart"></span>
+                Kurslar
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="users"></span>
+                İş Deneyimi / Staj
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <span data-feather="bar-chart-2"></span>
+                Projeler
+              </a>
+            </li>
+          </ul>
         </div>
-    </header>
-
-    <section id="home">
-        <img src="https://avatars.githubusercontent.com/u/59164729?s=400&u=ba6a58b26297680f88df4d6c33835a6145e74275&v=4" alt="AhmetUstaalioğlu">
-
-        <div class="name text-center">
-            <h2 class="heading-big">Ahmet Ustaalioğlu</h2>
-            <p>Computer Engineer | Kişisel Web Sitesi</p>
+      </nav>  
+      <main id="main" class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            deneme
         </div>
-
-        <a href="#courses" class="btn btn-primary">Kurslara Git</a>
-    </section>
-
-    <section id="training" class="bg-dark-blue">
-        <h3 class="text-center heading-medium">Eğitimler</h3>
-        <div class="items container">
-            <article class="item item1">
-                <i class="fa fa-pencil-alt"></i>
-                <h3>Online İçerikler</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, aliquid!</p>
-            </article>
-            <article class="item item2">
-                <i class="fa fa-pencil-alt"></i>
-                <h3>Sınıf İçi Eğitimler</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, aliquid!</p>
-            </article>
-            <article class="item item3">
-                <i class="fa fa-pencil-alt"></i>
-                <h3>Konferanslar</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, aliquid!</p>
-            </article>
+        <div>
+            deneme
         </div>
-    </section>
-
-    <section id="courses">
+        <div>deneme</div>
+        <div>
+            deneme
+        </div>
+        <div>deneme</div>
+        <div>
+            deneme
+        </div>
+        <div>deneme</div>
+        <div>
+            deneme
+        </div>
+        <div>deneme</div>
+        <div>
+            deneme
+        </div>
+        <div>deneme</div>
+        <div>
+            deneme
+        </div>
+        <div>deneme</div>
         
-        <h3 class="text-center heading-medium">Kurslar</h3>
-        <div class="container">
-            <div class="courses">
-            <!--  KURS 1  -->
-                <article class="course">
-                    <div class="course-image">
-                        <img src="./images/python.jpg" alt="Python">
-                        <span>%90 İndirim</span>
-                    </div>
-
-                    <div class="course-info">
-                        <div class="title">Komple Python Geliştirici Kursu</div>
-                        <div class="description">Komple Python Geliştirici Kursu | Sıfırdan Python Öğrenin</div>
-                        <div class="instructor">Ahmet Ustaalioğlu, Yazılım Bilimi</div>
-                        <div class="rating">4.6 | (19990 Oylama)</div>
-                    </div>
-                </article>
-            
-            <!--  KURS 2  -->
-            <article class="course">
-                <div class="course-image">
-                    <img src="./images/java.jpg" alt="Java">
-                    <span>%90 İndirim</span>
-                </div>
-
-                <div class="course-info">
-                    <div class="title">Komple Java Geliştirici Kursu</div>
-                    <div class="description">Komple Java Geliştirici Kursu | Sıfırdan Java Öğrenin</div>
-                    <div class="instructor">Ahmet Ustaalioğlu, Yazılım Bilimi</div>
-                    <div class="rating">4.6 | (7000 Oylama)</div>
-                </div>
-            </article>
-
-            <!--  KURS 3  -->
-            <article class="course">
-                <div class="course-image">
-                    <img src="./images/javascript.jpg" alt="Python">
-                    <span>%90 İndirim</span>
-                </div>
-
-                <div class="course-info">
-                    <div class="title">Komple JavaScript Geliştirici Kursu</div>
-                    <div class="description">Komple JavaScript Geliştirici Kursu | Sıfırdan JavaScript Öğrenin</div>
-                    <div class="instructor">Ahmet Ustaalioğlu, Yazılım Bilimi</div>
-                    <div class="rating">4.6 | (3162 Oylama)</div>
-                </div>
-            </article>
-            </div>
-        </div>
-    </section>
-    
-    <footer id="contact" class="bg-dark-blue">
-
-        <div class="contact-form">
-            <form>
-                <h4 class="text-center heading-medium">Bana Ulaşın</h4>
-
-                <div class="form-group">
-                    <label for="name">İsim</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="name" 
-                      id="name" 
-                      placeholder="İsim"
-                    ></div>
-
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="email" 
-                      id="email"
-                      placeholder="E-Mail"
-                ></div>
-
-                <div class="form-group">
-                    <label for="message">Mesaj</label>
-                    <textarea
-                        name="message" 
-                        id="message"
-                        class="form-control" 
-                        rows="10"
-                        placeholder="Mesajınız..."
-                    ></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-block">Gönder</button>
-            </form>
-
-            <ul>
-                <li>
-                    <a href="https:/www.facebook.com" target="_blank">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://www.twitter.com" target="_blank">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="https://www.instagram.com" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </li>
-            </ul>
-        </div>
+      </main>
+    </div>
+    <footer class="bg-dark text-white">
+        <div>Deneme</div>
     </footer>
-</body>
-</html>
+  </div>
+
+
+  
+  
+      <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  
+        <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script><script src="dashboard.js"></script>
+    
