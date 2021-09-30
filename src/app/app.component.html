@@ -135,6 +135,12 @@
           <div class="tab-content" id="nav-tabContent">
             <div *ngIf="idProje === 'html'" class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
               <div id="html" class="row">
+                <div id="htmlSideBarMobil" style="display: none;" class="col-md-3 bg-dark text-white">
+                  <div (click)="tabChangeHtmlProje('proje1')" class="htmlProjeMobil">Proje 1</div>
+                  <div (click)="tabChangeHtmlProje('proje2')" class="htmlProjeMobil">Proje 2</div>
+                  <div (click)="tabChangeHtmlProje('proje3')" class="htmlProjeMobil">Proje 3</div>
+                  <div (click)="tabChangeHtmlProje('proje4')" class="htmlProjeMobil">Proje 4</div>
+                </div>
                 <div id="htmlSection" class="col-md-9">
                   <div *ngIf="idHtmlProje === 'proje1'">
                     Proje 1
@@ -144,6 +150,9 @@
                   </div>
                   <div *ngIf="idHtmlProje === 'proje3'">
                     Proje 3
+                  </div>
+                  <div *ngIf="idHtmlProje === 'proje4'">
+                    Proje 4
                   </div>
                 </div>
                 <div id="htmlSideBar" class="col-md-3">
@@ -155,15 +164,37 @@
             </div>
             <div *ngIf="idProje === 'js'" class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
               <div id="html" class="row">
+                <div id="jsSideBarMobil" style="display: none;" class="col-md-3 shadow-lg">
+                  <div (click)="toggleTag()" class="htmlProje row justify-content-between bg-dark text-white text-center">
+                    <span style="text-align: center;" type="button">{{this.text}}</span>
+                    <div>
+                      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M4 9l8 8l8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g></svg>
+                    </div>
+                  </div>
+                  <div class="col" *ngIf="showMe" style="border-bottom: 1px solid white;">
+                    <div class="py-1" type="button" *ngIf="showMe" (click)="[js('Angular'),  jsProje(['Angular Proje 1', 'Angular Proje 2', 'Angular Proje 3', 'Angular Proje 4']), toggleTag()]">Angular</div>
+                    <div class="py-1" type="button" *ngIf="showMe" (click)="[js('React'), jsProje(['React Proje 1', 'React Proje 2']), toggleTag()]">React</div>
+                    <div class="py-1" type="button" *ngIf="showMe" (click)="[js('NextJs'),jsProje(['NextJs Proje 1', 'NextJs Proje 2']), toggleTag()]">NextJs</div>
+                  </div>
+                  <div id="jsProje">
+                    <div (click)="tabChangeJs(this.textProje[0])" class="py-1 jsProje">{{this.textProje[0]}}</div>
+                    <div (click)="tabChangeJs(this.textProje[1])" class="py-1 jsProje">{{this.textProje[1]}}</div>
+                    <div (click)="tabChangeJs(this.textProje[2])" class="py-1 jsProje">{{this.textProje[2]}}</div>
+                    <div (click)="tabChangeJs(this.textProje[3])" class="py-1 jsProje">{{this.textProje[3]}}</div>
+                  </div>
+                    
+                </div>
                 <div id="htmlSection" class="col-md-9">
                   <div *ngIf="idJs==='Angular Proje 1'">Angular Proje 1</div>
                   <div *ngIf="idJs==='Angular Proje 2'">Angular Proje 2</div>
+                  <div *ngIf="idJs==='Angular Proje 3'">Angular Proje 3</div>
+                  <div *ngIf="idJs==='Angular Proje 4'">Angular Proje 4</div>
                   <div *ngIf="idJs==='React Proje 1'">React Proje 1</div>
                   <div *ngIf="idJs==='React Proje 2'">React Proje 2</div>
                   <div *ngIf="idJs==='NextJs Proje 1'">Nextjs Proje 1</div>
                   <div *ngIf="idJs==='NextJs Proje 2'">Nextjs Proje 2</div>
                 </div>
-                <div id="htmlSideBar" class="col-md-3">
+                <div id="jsSideBar" class="col-md-3">
                   <div (click)="toggleTag()" class="htmlProje row justify-content-between">
                     <span type="button">{{this.text}}</span>
                     <div>

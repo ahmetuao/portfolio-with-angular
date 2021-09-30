@@ -10,7 +10,7 @@ export class AppComponent {
   showMe:boolean=false;
   text:string= "Angular";
   textProje: Array<any> = [
-    'Angular Proje 1', 'Angular Proje 2'
+    'Angular Proje 1', 'Angular Proje 2', 'Angular Proje 3', 'Angular Proje 4' 
   ];
   constructor(){}
 

@@ -135,6 +135,43 @@ body {
   .mobilSide {
     padding: 1rem;
   }
+  #jsSideBarMobil {
+    display: block!important;
+    height: fit-content;
+  }
+
+  #jsProje {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    max-width: 100%;
+    max-height: 35px;
+    overflow-y: scroll;
+  }
+
+  #htmlSideBarMobil {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 100%;
+    max-height: 35px;
+    overflow: scroll;
+    height: fit-content;
+  }
+  .htmlProjeMobil {
+    padding: 0.25rem 1rem;
+  }
+  #htmlSideBar {
+    display: none;
+  }
+  .jsProje {
+    width: fit-content !important;
+    height: auto;
+    padding: 0 0.5rem;
+    text-decoration: underline;
+  }
+  #jsSideBar {
+    display: none !important;
+  }
   #main{
     margin: 0 !important;
     text-align: center;
@@ -188,6 +225,10 @@ body {
     color: white;
     background-color:#343a40 ;
   }
+  #jsSideBar {
+    color: white;
+    background-color:#343a40 ;
+  }
   .htmlProje {
     border-bottom: 1px solid white;
     padding: 1rem;
@@ -237,6 +278,10 @@ body {
   #htmlSideBar {
     background-color:#343a40 ;
     color: white;
+  }
+  #jsSideBar {
+    color: white;
+    background-color:#343a40 ;
   }
   .htmlProje {
     border-bottom: 1px solid white;
