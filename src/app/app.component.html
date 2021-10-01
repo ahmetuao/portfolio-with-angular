@@ -112,8 +112,40 @@
             </div>
           </div>
         </div>
-        <div *ngIf="id === 'deneyim'" class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          Deneyim
+        <div id="deneyimPage" *ngIf="id === 'deneyim'">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            deneyim
+          </div>
+          <div id="deneyim" class="row">
+            <div id="etiya" class=" mr-1" style="background-color: #f3f3f3; padding: 1rem;">
+              <h6 class="text-center">ETİYA BİLGİ TEKNOLOJİLERİ</h6>
+              <img src="https://cdn.webrazzi.com/uploads/2021/08/etiya-222.png" width="100%" height="auto">
+              <p>Zorunlu okul stajımı "Etiya Bilgi Teknolojileri"nde yaptım. 30 iş günü staj süresince, 'Front-End' ağırlıklı olarak, bir yönetim paneli geliştirme sürecinde aktif rol aldım.
+                <br/>
+                <strong>Staj Süresince Öğrendiğim ve Geliştirdiğim Teknolojiler:</strong>
+                <li>Angular</li>
+                <li>Spring Boot</li>
+                <li>Spring Security</li>
+                <li>Keycloak</li>
+                <li>Java</li>
+                <li>Docker</li>
+              </p>
+            </div>
+            <div class=" ml-1" style="background-color: #f3f3f3; padding: 1rem;">
+              <h6 class="text-center">MAXITHINGS SOFTWARE</h6>
+              <img src="https://maxithings.com/patterns/logoBeyaz.png" width="100%" height="auto">
+              <p>Gönüllü olarak 3ay "MaxiThings Software" bünyesinde staj yaptım. 3 aylık staj süresince projelerin 'Front-End' kısımlarında aktif rol aldım.
+                <br/>
+                <strong>Staj Süresince Öğrendiğim ve Geliştirdiğim Teknolojiler:</strong>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Bootstrap</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>NextJS</li>
+              </p>
+            </div>
+          </div>
         </div>
         <div *ngIf="id === 'projeler'">
           <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-0 border-bottom">
@@ -174,6 +206,7 @@
                   <div (click)="tabChangeHtmlProje('proje1')" class="htmlProje">Proje 1</div>
                   <div (click)="tabChangeHtmlProje('proje2')" class="htmlProje">Proje 2</div>
                   <div (click)="tabChangeHtmlProje('proje3')" class="htmlProje">Proje 3</div>
+                  <div (click)="tabChangeHtmlProje('proje4')" class="htmlProje">Proje 4</div>
                 </div>
               </div>
             </div>
@@ -187,8 +220,8 @@
                     </div>
                   </div>
                   <div class="col" *ngIf="showMe" style="border-bottom: 1px solid white;">
-                    <div class="py-1" type="button" *ngIf="showMe" (click)="[js('Angular'),  jsProje(['Angular Proje 1', 'Angular Proje 2', 'Angular Proje 3', 'Angular Proje 4']), toggleTag()]">Angular</div>
-                    <div class="py-1" type="button" *ngIf="showMe" (click)="[js('React'), jsProje(['React Proje 1', 'React Proje 2']), toggleTag()]">React</div>
+                    <div class="py-1" type="button" *ngIf="showMe" (click)="[js('Angular'),  jsProje(['Angular Proje 1', 'Angular Proje 2']), toggleTag()]">Angular</div>
+                    <div class="py-1" type="button" *ngIf="showMe" (click)="[js('React'), jsProje(['React Proje 1', 'React Proje 2', 'React Proje 3']), toggleTag()]">React</div>
                     <div class="py-1" type="button" *ngIf="showMe" (click)="[js('NextJs'),jsProje(['NextJs Proje 1', 'NextJs Proje 2']), toggleTag()]">NextJs</div>
                   </div>
                   <div id="jsProje">
@@ -201,17 +234,23 @@
                 </div>
                 <div id="htmlSection" class="col-md-9">
                   <div *ngIf="idJs==='Angular Proje 1'">
-                    <div class="mt-3"><strong>Portfolio Web Application with
+                    <div id="angular1" class="mt-3" style="display: flex; flex-direction: row;"><div><strong>Portfolio Web Application with</strong></div>
                       <div id="svg">
                         <svg style="margin: 0 1rem;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="5em" height="auto" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 139"><g fill="none" fill-rule="evenodd"><g fill="#B52E31"><path d="M150.6 102.8v-63h8.1l38.5 50.7V39.8h7.7v63h-8.1l-38.5-51.2v51.2h-7.7z"/><path d="M267.6 100.3c-5.1 1.9-10.6 2.9-16.4 2.9c-22.8 0-34.2-10.9-34.2-32.8c0-20.7 11-31.1 33-31.1c6.3 0 12.2.9 17.6 2.6v7c-5.4-2.1-11-3.1-16.7-3.1c-17.2 0-25.8 8.2-25.8 24.4c0 17.5 8.5 26.2 25.4 26.2c2.7 0 5.7-.4 9-1.1V74.2h8.1v26.1z"/><path d="M280.6 78.5V39.8h8.1v38.7c0 12.1 6 18.2 18.1 18.2c12 0 18.1-6.1 18.1-18.2V39.8h8.1v38.7c0 16.5-8.7 24.8-26.2 24.8s-26.2-8.3-26.2-24.8z"/><path d="M355.6 39.8v56.4h33v6.6h-41.1v-63h8.1z"/><path d="M400.3 102.8h-8.5l31.3-71.3l31.3 71.3h-9L437.3 83h-20.8l2.2-6.6h15.9l-11.8-28.5l-22.5 54.9z"/><path d="M463.1 102.8v-63H490c12 0 18 5 18 15.1c0 8.2-5.9 14.3-17.6 18.2l21.6 29.7h-10.7l-20-28.3v-5.3c12-1.9 18.1-6.5 18.1-13.9c0-5.8-3.3-8.7-10-8.7h-18v56.2h-8.3z"/></g><path d="M0 23L64.5 0l66.2 22.6l-10.7 85.3l-55.5 30.7l-54.6-30.3L0 23z" fill="#E23237"/><path d="M130.7 22.6L64.5 0v138.6l55.5-30.7l10.7-85.3z" fill="#B52E31"/><path d="M64.6 16.2l-40.2 89.4l15-.3l8.1-20.2H83.4l8.8 20.4l14.3.3l-41.9-89.6zm.1 28.7l13.6 28.4H52.8l11.9-28.4z" fill="#FFF"/></g></svg>
                     </div>
-                    </strong></div>
+                    </div>
                     <p>Üzerinde gezinmekte olduğunuz, Angular ile geliştirdiğim uygulama :)</p>
                     <strong>Github Link: </strong><span><a target="_blank" href="https://github.com/ahmetuao/portfolio-with-angular">https://github.com/ahmetuao/portfolio-with-angular</a></span>
                   </div>
-                  <div *ngIf="idJs==='Angular Proje 2'">Angular Proje 2</div>
-                  <div *ngIf="idJs==='Angular Proje 3'">Angular Proje 3</div>
-                  <div *ngIf="idJs==='Angular Proje 4'">Angular Proje 4</div>
+                  <div *ngIf="idJs==='Angular Proje 2'">
+                    <div id="angular2" class="mt-3" style="display: flex;flex-direction: row;"><div><strong>Ecommerce Web Application with</strong></div>
+                      <div id="svg">
+                        <svg style="margin: 0 1rem;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="5em" height="auto" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 139"><g fill="none" fill-rule="evenodd"><g fill="#B52E31"><path d="M150.6 102.8v-63h8.1l38.5 50.7V39.8h7.7v63h-8.1l-38.5-51.2v51.2h-7.7z"/><path d="M267.6 100.3c-5.1 1.9-10.6 2.9-16.4 2.9c-22.8 0-34.2-10.9-34.2-32.8c0-20.7 11-31.1 33-31.1c6.3 0 12.2.9 17.6 2.6v7c-5.4-2.1-11-3.1-16.7-3.1c-17.2 0-25.8 8.2-25.8 24.4c0 17.5 8.5 26.2 25.4 26.2c2.7 0 5.7-.4 9-1.1V74.2h8.1v26.1z"/><path d="M280.6 78.5V39.8h8.1v38.7c0 12.1 6 18.2 18.1 18.2c12 0 18.1-6.1 18.1-18.2V39.8h8.1v38.7c0 16.5-8.7 24.8-26.2 24.8s-26.2-8.3-26.2-24.8z"/><path d="M355.6 39.8v56.4h33v6.6h-41.1v-63h8.1z"/><path d="M400.3 102.8h-8.5l31.3-71.3l31.3 71.3h-9L437.3 83h-20.8l2.2-6.6h15.9l-11.8-28.5l-22.5 54.9z"/><path d="M463.1 102.8v-63H490c12 0 18 5 18 15.1c0 8.2-5.9 14.3-17.6 18.2l21.6 29.7h-10.7l-20-28.3v-5.3c12-1.9 18.1-6.5 18.1-13.9c0-5.8-3.3-8.7-10-8.7h-18v56.2h-8.3z"/></g><path d="M0 23L64.5 0l66.2 22.6l-10.7 85.3l-55.5 30.7l-54.6-30.3L0 23z" fill="#E23237"/><path d="M130.7 22.6L64.5 0v138.6l55.5-30.7l10.7-85.3z" fill="#B52E31"/><path d="M64.6 16.2l-40.2 89.4l15-.3l8.1-20.2H83.4l8.8 20.4l14.3.3l-41.9-89.6zm.1 28.7l13.6 28.4H52.8l11.9-28.4z" fill="#FFF"/></g></svg>
+                    </div>
+                    </div>
+                    <p>Angular ile geliştirdiğim bir alışveriş uygulaması :)</p>
+                    <strong>Github Link: </strong><span><a target="_blank" href="https://github.com/ahmetuao/ecommerce-with-angular">https://github.com/ahmetuao/ecommerce-with-angular</a></span>
+                  </div>
                   <div *ngIf="idJs==='React Proje 1'">
                     <div class="mt-3"><strong>Breaking Bad Project | REACT</strong></div>
                     <p>Çok sevdiğim ve defalarca izlediğim bir dizi olan 'Breaking Bad'e ihafen geliştirmiş olduğum React Projesi</p>
@@ -220,12 +259,15 @@
                   <div *ngIf="idJs==='React Proje 2'"><div class="mt-3"><strong>Ecommerce Project | REACT</strong></div>
                   <p>React kullanarak oluşturmuş olduğum bir Ecommerce Projesi</p>
                   <strong>Github Link: </strong><span><a target="_blank" href="https://github.com/ahmetuao/ReactEcommerceProject">https://github.com/ahmetuao/ReactEcommerceProject</a></span></div>
+                  <div *ngIf="idJs==='React Proje 3'"><div class="mt-3"><strong>Northwind-Redux Project | REACT</strong></div>
+                  <p>React Redux kullanarak oluşturmuş olduğum bir Proje</p>
+                  <strong>Github Link: </strong><span><a target="_blank" href="https://github.com/ahmetuao/northwing-redux">https://github.com/ahmetuao/northwing-redux</a></span></div>
+                  
                   <div *ngIf="idJs==='NextJs Proje 1'">
                     <div class="mt-3"><strong>NextJS Project</strong></div>
                     <p>NextJS kullanarak geliştirmiş olduğum bir uygulama</p>
                     <strong>Github Link: </strong><span><a target="_blank" href="https://github.com/ahmetuao/NextJSproject">https://github.com/ahmetuao/NextJSproject</a></span>
                   </div>
-                  <div *ngIf="idJs==='NextJs Proje 2'">Nextjs Proje 2</div>
                 </div>
                 <div id="jsSideBar" class="col-md-3">
                   <div (click)="toggleTag()" class="htmlProje row justify-content-between">
@@ -236,23 +278,48 @@
                   </div>
                   <div class="col" *ngIf="showMe" style="border-bottom: 1px solid white;">
                     <div class="py-1" type="button" *ngIf="showMe" (click)="[js('Angular'),  jsProje(['Angular Proje 1', 'Angular Proje 2']), toggleTag()]">Angular</div>
-                    <div class="py-1" type="button" *ngIf="showMe" (click)="[js('React'), jsProje(['React Proje 1', 'React Proje 2']), toggleTag()]">React</div>
-                    <div class="py-1" type="button" *ngIf="showMe" (click)="[js('NextJs'),jsProje(['NextJs Proje 1', 'NextJs Proje 2']), toggleTag()]">NextJs</div>
+                    <div class="py-1" type="button" *ngIf="showMe" (click)="[js('React'), jsProje(['React Proje 1', 'React Proje 2', 'React Proje 3']), toggleTag()]">React</div>
+                    <div class="py-1" type="button" *ngIf="showMe" (click)="[js('NextJs'),jsProje(['NextJs Proje 1']), toggleTag()]">NextJs</div>
                   </div>
                     <div (click)="tabChangeJs(this.textProje[0])" class="py-1">{{this.textProje[0]}}</div>
                     <div (click)="tabChangeJs(this.textProje[1])" class="py-1">{{this.textProje[1]}}</div>
+                    <div (click)="tabChangeJs(this.textProje[2])" class="py-1">{{this.textProje[2]}}</div>
                 </div>
               </div>
             </div>
-            <div *ngIf="idProje === 'asp.net'" class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">ASP.NET</div>
+            <div *ngIf="idProje === 'asp.net'" class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+              <div id="asp" class="col-md-12 col-12 mt-5">
+                <p>Bitirme Projesi dersi kapsamında, Asp.NET MVC kullanarak geliştirmiş olduğum bir E-Ticaret içerikli Tatil Seyahat Blog'u.</p>
+                <strong>Kullanılan Teknolojiler:</strong>
+                <br/>
+                <li>Asp.NET</li>
+                <li>MVC</li>
+                <li>MsSQL</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <strong>Github Link:</strong><a href="https://github.com/ahmetuao/MVC5-Tatil-Seyehat-Blogu">https://github.com/ahmetuao/MVC5-Tatil-Seyehat-Blogu</a>
+              </div>
+            </div>
           </div>
         </div>
       </main>
     </div>
     <footer style="display: flex; flex-direction: row; justify-content: center;" class="bg-dark text-white row">
-        <div class="p-3" style="font-size: 2rem;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.465 1.066C8.638 1.012 9.012 1 12 1c2.988 0 3.362.013 4.534.066c1.172.053 1.972.24 2.672.511c.733.277 1.398.71 1.948 1.27c.56.549.992 1.213 1.268 1.947c.272.7.458 1.5.512 2.67C22.988 8.639 23 9.013 23 12c0 2.988-.013 3.362-.066 4.535c-.053 1.17-.24 1.97-.512 2.67a5.396 5.396 0 0 1-1.268 1.949c-.55.56-1.215.992-1.948 1.268c-.7.272-1.5.458-2.67.512c-1.174.054-1.548.066-4.536.066c-2.988 0-3.362-.013-4.535-.066c-1.17-.053-1.97-.24-2.67-.512a5.397 5.397 0 0 1-1.949-1.268a5.392 5.392 0 0 1-1.269-1.948c-.271-.7-.457-1.5-.511-2.67C1.012 15.361 1 14.987 1 12c0-2.988.013-3.362.066-4.534c.053-1.172.24-1.972.511-2.672a5.396 5.396 0 0 1 1.27-1.948a5.392 5.392 0 0 1 1.947-1.269c.7-.271 1.5-.457 2.67-.511zm8.98 1.98c-1.16-.053-1.508-.064-4.445-.064c-2.937 0-3.285.011-4.445.064c-1.073.049-1.655.228-2.043.379c-.513.2-.88.437-1.265.822a3.412 3.412 0 0 0-.822 1.265c-.151.388-.33.97-.379 2.043c-.053 1.16-.064 1.508-.064 4.445c0 2.937.011 3.285.064 4.445c.049 1.073.228 1.655.379 2.043c.176.477.457.91.822 1.265c.355.365.788.646 1.265.822c.388.151.97.33 2.043.379c1.16.053 1.507.064 4.445.064c2.938 0 3.285-.011 4.445-.064c1.073-.049 1.655-.228 2.043-.379c.513-.2.88-.437 1.265-.822c.365-.355.646-.788.822-1.265c.151-.388.33-.97.379-2.043c.053-1.16.064-1.508.064-4.445c0-2.937-.011-3.285-.064-4.445c-.049-1.073-.228-1.655-.379-2.043c-.2-.513-.437-.88-.822-1.265a3.413 3.413 0 0 0-1.265-.822c-.388-.151-.97-.33-2.043-.379zm-5.85 12.345a3.669 3.669 0 0 0 4-5.986a3.67 3.67 0 1 0-4 5.986zM8.002 8.002a5.654 5.654 0 1 1 7.996 7.996a5.654 5.654 0 0 1-7.996-7.996zm10.906-.814a1.337 1.337 0 1 0-1.89-1.89a1.337 1.337 0 0 0 1.89 1.89z" fill="currentColor"/></g></svg></div>
-        <div class="p-3" style="font-size: 2rem;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M23.643 4.937c-.835.37-1.732.62-2.675.733a4.67 4.67 0 0 0 2.048-2.578a9.3 9.3 0 0 1-2.958 1.13a4.66 4.66 0 0 0-7.938 4.25a13.229 13.229 0 0 1-9.602-4.868c-.4.69-.63 1.49-.63 2.342A4.66 4.66 0 0 0 3.96 9.824a4.647 4.647 0 0 1-2.11-.583v.06a4.66 4.66 0 0 0 3.737 4.568a4.692 4.692 0 0 1-2.104.08a4.661 4.661 0 0 0 4.352 3.234a9.348 9.348 0 0 1-5.786 1.995a9.5 9.5 0 0 1-1.112-.065a13.175 13.175 0 0 0 7.14 2.093c8.57 0 13.255-7.098 13.255-13.254c0-.2-.005-.402-.014-.602a9.47 9.47 0 0 0 2.323-2.41l.002-.003z" fill="currentColor"/></g></svg></div>
-        <div class="p-3" style="font-size: 2rem;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 2.838A1.838 1.838 0 0 1 2.838 1H21.16A1.837 1.837 0 0 1 23 2.838V21.16A1.838 1.838 0 0 1 21.161 23H2.838A1.838 1.838 0 0 1 1 21.161V2.838zm8.708 6.55h2.979v1.496c.43-.86 1.53-1.634 3.183-1.634c3.169 0 3.92 1.713 3.92 4.856v5.822h-3.207v-5.106c0-1.79-.43-2.8-1.522-2.8c-1.515 0-2.145 1.089-2.145 2.8v5.106H9.708V9.388zm-5.5 10.403h3.208V9.25H4.208v10.54zM7.875 5.812a2.063 2.063 0 1 1-4.125 0a2.063 2.063 0 0 1 4.125 0z" fill="currentColor"/></g></svg></div>
+        <div class="p-3" style="font-size: 2rem;">
+          <a href="https://www.instagram.com/ahmet.uao/" target="_blank" style="color: white;">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M7.465 1.066C8.638 1.012 9.012 1 12 1c2.988 0 3.362.013 4.534.066c1.172.053 1.972.24 2.672.511c.733.277 1.398.71 1.948 1.27c.56.549.992 1.213 1.268 1.947c.272.7.458 1.5.512 2.67C22.988 8.639 23 9.013 23 12c0 2.988-.013 3.362-.066 4.535c-.053 1.17-.24 1.97-.512 2.67a5.396 5.396 0 0 1-1.268 1.949c-.55.56-1.215.992-1.948 1.268c-.7.272-1.5.458-2.67.512c-1.174.054-1.548.066-4.536.066c-2.988 0-3.362-.013-4.535-.066c-1.17-.053-1.97-.24-2.67-.512a5.397 5.397 0 0 1-1.949-1.268a5.392 5.392 0 0 1-1.269-1.948c-.271-.7-.457-1.5-.511-2.67C1.012 15.361 1 14.987 1 12c0-2.988.013-3.362.066-4.534c.053-1.172.24-1.972.511-2.672a5.396 5.396 0 0 1 1.27-1.948a5.392 5.392 0 0 1 1.947-1.269c.7-.271 1.5-.457 2.67-.511zm8.98 1.98c-1.16-.053-1.508-.064-4.445-.064c-2.937 0-3.285.011-4.445.064c-1.073.049-1.655.228-2.043.379c-.513.2-.88.437-1.265.822a3.412 3.412 0 0 0-.822 1.265c-.151.388-.33.97-.379 2.043c-.053 1.16-.064 1.508-.064 4.445c0 2.937.011 3.285.064 4.445c.049 1.073.228 1.655.379 2.043c.176.477.457.91.822 1.265c.355.365.788.646 1.265.822c.388.151.97.33 2.043.379c1.16.053 1.507.064 4.445.064c2.938 0 3.285-.011 4.445-.064c1.073-.049 1.655-.228 2.043-.379c.513-.2.88-.437 1.265-.822c.365-.355.646-.788.822-1.265c.151-.388.33-.97.379-2.043c.053-1.16.064-1.508.064-4.445c0-2.937-.011-3.285-.064-4.445c-.049-1.073-.228-1.655-.379-2.043c-.2-.513-.437-.88-.822-1.265a3.413 3.413 0 0 0-1.265-.822c-.388-.151-.97-.33-2.043-.379zm-5.85 12.345a3.669 3.669 0 0 0 4-5.986a3.67 3.67 0 1 0-4 5.986zM8.002 8.002a5.654 5.654 0 1 1 7.996 7.996a5.654 5.654 0 0 1-7.996-7.996zm10.906-.814a1.337 1.337 0 1 0-1.89-1.89a1.337 1.337 0 0 0 1.89 1.89z" fill="currentColor"/></g></svg>
+          </a>
+        </div>
+        <div class="p-3" style="font-size: 2rem;">
+          <a href="https://twitter.com/AhmetYlmazUsta1" target="_blank" style="color: white;">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path d="M23.643 4.937c-.835.37-1.732.62-2.675.733a4.67 4.67 0 0 0 2.048-2.578a9.3 9.3 0 0 1-2.958 1.13a4.66 4.66 0 0 0-7.938 4.25a13.229 13.229 0 0 1-9.602-4.868c-.4.69-.63 1.49-.63 2.342A4.66 4.66 0 0 0 3.96 9.824a4.647 4.647 0 0 1-2.11-.583v.06a4.66 4.66 0 0 0 3.737 4.568a4.692 4.692 0 0 1-2.104.08a4.661 4.661 0 0 0 4.352 3.234a9.348 9.348 0 0 1-5.786 1.995a9.5 9.5 0 0 1-1.112-.065a13.175 13.175 0 0 0 7.14 2.093c8.57 0 13.255-7.098 13.255-13.254c0-.2-.005-.402-.014-.602a9.47 9.47 0 0 0 2.323-2.41l.002-.003z" fill="currentColor"/></g></svg>
+          </a>
+        </div>
+        <div class="p-3" style="font-size: 2rem;">
+          <a href="https://www.linkedin.com/in/ahmet-yılmaz-ustaalioğlu-a42b7a205/" target="_blank" style="color: white;">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 2.838A1.838 1.838 0 0 1 2.838 1H21.16A1.837 1.837 0 0 1 23 2.838V21.16A1.838 1.838 0 0 1 21.161 23H2.838A1.838 1.838 0 0 1 1 21.161V2.838zm8.708 6.55h2.979v1.496c.43-.86 1.53-1.634 3.183-1.634c3.169 0 3.92 1.713 3.92 4.856v5.822h-3.207v-5.106c0-1.79-.43-2.8-1.522-2.8c-1.515 0-2.145 1.089-2.145 2.8v5.106H9.708V9.388zm-5.5 10.403h3.208V9.25H4.208v10.54zM7.875 5.812a2.063 2.063 0 1 1-4.125 0a2.063 2.063 0 0 1 4.125 0z" fill="currentColor"/></g></svg>
+          </a>
+        </div>
     </footer>
   </div>
 
